@@ -1,27 +1,28 @@
-body{
-    background-color: #fff;
-}
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.welcome{
+
+body {
+    background-color: #fff;
+    margin: 0; /* Añade margen cero para asegurarte de que no haya espacios adicionales */
+    height: 100vh; /* Usa la unidad vh (viewport height) para el 100% de la altura */
+}
+
+.welcome {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     color: #fff;
-    background: linear-gradient(45deg,#fefe9a,#e4b6b6, #b6dce7,#c2d69b);
+    background: linear-gradient(45deg, #fefe9a, #e4b6b6, #b6dce7, #c2d69b);
     background-size: 400% 400%;
     position: relative;
     animation: cambiar 10s ease-in infinite;
-    width: 100vh;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*border: 1px solid gray;
-    */margin: auto;
-    -webkit-animation: cambiar 10s ease-in infinite;
+    box-sizing: border-box; /* Añade box-sizing para que los paddings no afecten al tamaño total */
 }
+
 @keyframes cambiar{
     0%{background-position: 0 50%;}
     50%{background-position: 100% 50%;}
@@ -29,11 +30,14 @@ body{
 }
 .welcome .hey{
     width: 30%;
-    height: 30%;
+    height: auto;
+    min-height: 20%;
     display: flex;
+    flex-direction: column;
+    gap: 50px;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 12px;
     /* letter-spacing: 1px; */
     border: 1px solid black;
     border-radius: 5px;
@@ -43,4 +47,18 @@ body{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    /* text-decoration: ; */
+}
+.welcome .hey #cuerpo{
+    /* border-bottom: 1px solid gray 50%; */
+}
+.welcome .hey #pd{
+    font-size: 12px;
+    text-decoration: dotted;
+}
+
+@media (max-width: 700px) {
+    .welcome .hey{
+        width: 60%;
+    }
 }
