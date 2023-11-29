@@ -1,0 +1,10 @@
+.welcome{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    -ms-flex-align: center;
+    justify-content: center;
+}
+.welcome .hey{
+    color: blue;
+}
